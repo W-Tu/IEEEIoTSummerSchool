@@ -1,0 +1,17 @@
+BLEMeshFlooding Simulator
+
+Setup
+------
+Use the installer package (BLEMeshFlooding_Installer.exe) to install Bluetooth Mesh Simulator on a Windows machine. The installer will install:
+  a) BLEMeshFlooding 
+  b) MATLAB Runtime 2022b
+
+Running the Simulator
+---------------------
+Open a Windows Command Prompt (PowerShell)
+	cd 'C:\Program Files\BLEMeshFlooding\application'
+	.\BLEMeshFlooding.exe '.\BluetoothMeshSettings.csv'
+	
+A window will pop up that shows a simulation of Bluetooth Mesh Protocol as per settings specified in .\BluetoothMeshSettings.csv
+
+Disclaimer: The simulator is based on MATLAB Bluetooth Toolbox and associated packages. It has been extended so that users can change Bluetooth Mesh settings, network configurations, etc. to understand how Bluetooth Mesh Managed Flooding protocol works.    

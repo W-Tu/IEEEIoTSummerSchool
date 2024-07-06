@@ -1,0 +1,48 @@
+Option, Value, Description
+node 1,[94.3522916666667  134.93091393079], node name and position
+node 2,[114.845 126.888322981366], node name and position
+node 3,[133.406458333333 135.479272404614], node name and position
+node 4,[149.500208333333 138.038278615794], node name and position
+node 5,[83.623125 121.03916592724], node name and position
+node 6,[103.686666666667 115.555581188997], node name and position
+node 7,[124.823125 115.555581188997], node name and position
+node 8,[141.23875 116.469511978705], node name and position
+node 9,[154.221041666667 116.286725820763], node name and position
+node 10,[162.911666666667 129.081756876664], node name and position
+node 11,[80.9408333333333 103.12612244898], node name and position
+node 12,[97.2491666666667 96.9113930789707], node name and position
+node 13,[113.986666666667 100.567116237799], node name and position
+node 14,[135.874166666667 97.0941792369122], node name and position
+node 15,[156.581458333333 97.459751552795], node name and position
+node 16,[180 90], node name and position
+node 17,[109.695 79.912280390417], node name and position
+node 18,[126.003333333333 81.3745696539486], node name and position
+node 19,[144.242916666667 85.761437444543], node name and position
+node 20,[116.668958333333 55.9672937000887], node name and position
+node 21,[124 156], node name and position
+
+% How long to run the simulation 
+simulationTime, 0.3, Duration of simulation in seconds
+
+% who sends and to whom.
+sourceDestinationPairs, [1 10; 11 20;5 15], source destination pairs separated by semicolon 
+sourceOnTimeRatio,1, a ratio of total simulation time when source would be actively sending
+
+% Single hop commmunication/ discovery 
+receiverRange, 25, transmission range in meters
+advertisingInterval,20e-3,Periodicity with which node advertise its presence to others typically done on dedicated 3 out of 40 Bluetooth channels. must be greater than 0.02s
+scanInterval, 30e-3,Periodicity with which nodes wake up to discover other advertising nodes 
+
+% relays 
+relayNodes, [3 6 7 8 9 12 13 14 15 17],  nodes in mesh network that relay messages
+relayRetransmissions,3, number of retransmission attempts done by relay for a packet
+relayRetransmitInterval, randi([1 3])*10e-3, duration to wait between retransmission attempts
+
+
+
+%Bluetooth multihop protocol parameters
+ttl,5,time to live or number of hops for packet to go beyond the source 
+
+
+% should visualise transmissions? values  0/1 
+highlightTransmissions, 1, visualise transmission
